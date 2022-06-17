@@ -1,5 +1,3 @@
-
-
 // This function will randomly return Rock, Paper, or Scissors
 function computerPlay() {
     let randomNum = Math.floor(Math.random() * 3);
@@ -49,10 +47,13 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = "rock";
-let computerSelection = computerPlay();
-console.log(gameRound(playerSelection, computerSelection));
 // This is in charge of the game
 function game() {
-
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = window.prompt("Rock, Paper, or Scissors?")
+        let computerSelection = computerPlay();
+        console.log(gameRound(playerSelection, computerSelection));
+    }
 }
+
+game();
